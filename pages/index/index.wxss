@@ -1,0 +1,79 @@
+.container{
+  padding-top: 100rpx;
+}
+
+.search{
+  padding: 10px;
+  background: #ff2d4a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+.search-input{
+  height:60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 4px;
+  font-size:14px;
+  color: #666;
+}
+
+.search-inpout icon{
+  margin-right: 10px;
+}
+
+.slide-image{
+  width:750rpx;
+  height:340rpx;
+}
+
+/* //分类 */
+.classify {
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+}
+.classify image{
+  width:128rpx;
+  height:140rpx;
+}
+
+.floor{
+  margin-top:20rpx;
+}
+
+.floor-title image{
+  width:100%;
+  height:60rpx;
+}
+
+.floor-content{
+  padding:20rpx;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.floor-content-left image{
+  width:232rpx;
+  height:386rpx;
+}
+
+.floor-content-right{
+  flex:1;
+  margin-left:10rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.floor-content-right image{
+  width:233rpx;
+  height:188rpx;
+}

@@ -1,0 +1,57 @@
+<view class="container">
+
+  <!-- 搜索 -->
+  <view class="search">
+    <view class="search-input">
+      <icon type="search" size="16"/>搜索
+    </view>
+  </view>
+
+
+  <!-- 轮播图 -->
+  <swiper
+   indicator-dots="true"
+   autoplay="{{autoplay}}" 
+   interval="3000" 
+   duration="1000">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item.image_src}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 分类 -->
+  <view class="classify">
+    <image  wx:for="{{imgClassify}}" wx:key="{{index}}" src="{{item.image_src}}" />
+  </view>
+
+  <!-- 楼层 -->
+  <view class="floor"
+  wx:for="{{ floors }}"
+  wx:key="{{ index }}">
+    <!-- 楼层标题 -->
+    <view class="floor-title">
+      <image src="{{item.floor_title.image_src}}" mode="aspectFill"></image>
+    </view>
+
+    <!-- 楼层内容 -->
+    <view class="floor-content">
+      <!-- 左侧的大图 -->
+      <view class="floor-content-left">
+        <image src="{{ item.product_list[0].image_src }}" mode="aspectFill"></image>
+      </view>
+      <!-- 右侧四张小图 -->
+      <view class="floor-content-right">
+        <image 
+        wx:for="{{ item.product_list }}"
+        wx:key="{{ index }}"
+        wx:if="{{index > 0}}"
+        src="{{ item.image_src }}" 
+        mode="aspectFill"
+        ></image>
+      </view>
+    </view>
+
+  </view>
+</view>
