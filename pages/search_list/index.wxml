@@ -22,7 +22,8 @@
   <navigator 
   wx:for="{{goods}}"
   wx:key="{{index}}"
-  class="search_center" >
+  class="search_center" 
+  url="/pages/goods_detail/index?id={{item.goods_id}}" >
   <view class="search_center_left">
     <image src="{{item.goods_small_logo}}"></image>
   </view>

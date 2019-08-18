@@ -1,12 +1,44 @@
-<swiper 
-class="swiper_img"
-indicator-dots="{{indicatorDots}}"
-autoplay="true" 
-interval="3000" 
-duration="1000">
-  <block wx:for="{{imgUrls}}">
+<!-- 商品轮播图 -->
+<swiper class="swiper_img" indicator-dots="{{indicatorDots}}" autoplay="true" interval="3000" duration="1000">
+  <block wx:for="{{imgUrls}}" wx:key="{{ index }}">
     <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      <image src="{{item.pics_big}}" class="slide-image" />
     </swiper-item>
   </block>
 </swiper>
+
+<!-- 内容 -->
+<view class="goods_detail">
+  <view class="goods_center">
+    ￥
+    <text>{{detail.goods_price}}</text>
+  </view>
+
+  <view class="goods_title">
+    <text>{{detail.goods_name}}</text> 
+    <view class="goods_ico">
+    <text class="iconfont icon-shoucang"></text>
+      收藏
+    </view>
+  </view>
+  <view class="goods_express">
+    快递: 免运费
+  </view>
+</view>
+
+ <!-- //商品详情内容 -->
+  <rich-text nodes="{{ detail.goods_introduce }}"></rich-text>
+
+<!-- // 底部 -->
+<view class="goods_bottom">
+  <view class="goods_left">
+    <view class="iconfont icon-kefu"></view>
+    <text>联系客服</text>
+  </view>
+  <view class="goods_left">
+    <view class="iconfont icon-gouwuche"></view>
+    <text>购物车</text>
+  </view>
+  <view class="goods-bottom-bar">加入购物车</view>
+  <view class="goods-bottom-bar">立即购买</view>
+</view>
