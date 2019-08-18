@@ -1,21 +1,12 @@
 <view class="container">
   <!-- 搜索 -->
-  <view class="search">
-    <view class="search-input">
-      <icon type="search" size="16"/>搜索
-    </view>
-  </view>
+  <search/>
 
   <!-- 分类页的内容 -->
   <view class="main">
     <!-- 左侧菜单栏 -->
     <view class="navs">
-      <view 
-      class="navs-item {{ index === current ? 'active': '' }}" 
-      wx:for="{{ navs }}" 
-      wx:key="{{index}}"
-      bindtap="handleChange"
-      data-index="{{index}}">
+      <view class="navs-item {{ index === current ? 'active': '' }}" wx:for="{{ navs }}" wx:key="{{ index }}" bindtap="handleChange" data-index="{{index}}">
         {{ item.cat_name }}
       </view>
     </view>
@@ -23,28 +14,29 @@
     <!-- 品牌列表，点击时候切换数据 -->
     <view class="categorys">
 
-      <view class="categorys-row"
-      wx:for="{{ navs[current].children }}">
+      <view class="categorys-row" wx:for="{{ navs[current].children }}" wx:key="{{ index }}">
         <!-- 标题 -->
         <view class="categorys-title">
-          <text>/</text>
-          {{ item.cat_name }}
+          <text>/</text> {{ item.cat_name }}
           <text>/</text>
         </view>
 
         <!-- 品牌列表 -->
         <view class="categorys-list">
-          <view class="categorys-item" wx:for="{{ item.children }}" wx:key="{{index}}">
-            <image 
-            src="{{ item.cat_icon }}"
-            mode="aspectFill"
-            ></image>
-            <view>{{ item.cat_name }}</view>
-          </view>
+          <navigator 
+          url="/pages/search_list/index?keyword={{item.cat_name}}"
+          class="categorys-item"
+          wx:for="{{ item.children }}"
+          wx:key="{{index}}" >
+            <view >
+              <image src="{{ item.cat_icon }}" mode="aspectFill"></image>
+              <view>{{ item.cat_name }}</view>
+            </view>
+          </navigator>
         </view>
       </view>
     </view>
-    
+
   </view>
 
 </view>
