@@ -1,37 +1,31 @@
-<!-- 搜索栏 -->
-<view class="search_list">
-  <view class="search_icon">
-      <icon type="search" size="16">
-      </icon> 搜索
+<!-- 顶部搜索栏 -->
+<view class="search">
+  <!-- 输入框 -->
+  <view class="search-input">
+    <icon type="search" size="16"></icon>
+    <!-- bindinput相当于web里的oninput，每次输入文字时候都会触发 -->
+    <!-- bindconfirm 点击确定按钮时候触发，手机的按钮可能叫搜索，也可能叫完成 -->
+    <input placeholder="请输入你想要的商品" value="{{ inputValue }}" bindinput="handleInput" bindconfirm="handleConfirm"></input>
   </view>
-  <view class="cancel" wx:if="{{ inputValue }}" bindtap="cancelSearch">取消</view>
+  <!-- 取消按钮 -->
+  <view class="cancel" wx:if="{{ inputValue }}" bindtap="handleCancel">取消</view>
 </view>
 
-<!-- tab栏 -->
-<view class="search_title">
-  <view class="search_tab {{ current == index ? 'serch_tabred' : '' }}" wx:for="{{['综合','销量','价格']}}" wx:key="{{index}}" bindtap="handleChange" data-index="{{index}}"> {{item}}</view>
-</view>
+<!-- 搜索内容 -->
+<view class="search-content">
+  <view class="search-title">
+    <text>历史搜索</text>
+    <!-- 清出全部搜索记录 -->
+    <icon type="clear" size="16" bindtap="handleClearAll"></icon>
+  </view>
 
-
-<!-- 商品内容 -->
-<view>
-  <navigator wx:for="{{goods}}" wx:key="{{index}}" class="search_center" url="/pages/goods_detail/index?id={{item.goods_id}}">
-    <view class="search_center_left">
-      <image src="{{item.goods_small_logo}}"></image>
-    </view>
-    <view class="search_center_right">
-      <view class="search_center_top">
-        <text>{{item.goods_name}}</text>
-      </view>
-      <view class="search_center_bottom">
-        $
-        <text>{{item.goods_price}}</text>
-      </view>
-    </view>
-  </navigator>
-</view>
-
-<!-- 加载下一页的数据 -->
-<view class="load-more">
-  {{ hasMore ? '加载更多' : '我也是有底线的' }}
+  <!-- 历史搜索记录 -->
+  <view class="history-list">
+    <navigator
+    url="/pages/search_list/index?keyword={{item}}"
+    wx:for="{{history}}"
+    wx:key="{{index}}" >
+      {{item}}
+    </navigator>
+  </view>
 </view>
