@@ -66,7 +66,7 @@
 }
 
 .goods_left {
-  width: 25%;
+  width: 20%;
   font-size: 12px;
   margin-top: 15rpx;
 }
@@ -81,4 +81,13 @@
 
 .goods-bottom-bar:last-child {
   background: red;
+}
+
+.contact{
+  position:absolute;
+  left:0; top:0;
+  width:20%;
+  height:100rpx;
+  overflow: hidden;
+  opacity: 0;
 }

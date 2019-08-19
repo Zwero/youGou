@@ -32,6 +32,7 @@ const request = function (config = {}) {
   // 条件是config.url开头是否包含http或者https
   // 如果包含了http不加上默认的baseURL
   // search的使用： https://www.w3school.com.cn/jsref/jsref_search.asp
+  // 注释：如果没有找到任何匹配的子串，则返回 -1。
   if (config.url.search(/^http/) === -1) {
     config.url = request.defaults.baseURL + config.url;
   }

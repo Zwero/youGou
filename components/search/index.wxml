@@ -1,6 +1,6 @@
 <!-- 搜索栏 -->
 <view class="search">
-    <view class="search-input">
-      <icon type="search" size="16"/>搜索
-    </view>
-  </view>
+  <navigator class="search-input" url="/pages/search/index">
+    <icon type="search" size="16" />搜索
+  </navigator>
+</view>

@@ -1,2 +1,62 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!-- 收货地址 -->
+<view class="address">
+  <view class="address-info">
+    <text>收货人: 苏老师</text>
+    <text>13800138000</text>
+  </view>
+
+  <view class="address-text">
+    收货地址: 落实到积分
+  </view>
+
+  <image src="../../images/cart_border@2x.png" class="border"></image>
+</view>
+
+<!-- 内容 -->
+<view class="cart_center">
+  <view class="iconfont icon-dianpu"></view>
+  <text>优购生活馆</text>
+</view>
+
+<!-- 商品列表 -->
+<view class="goods-item">
+  <icon type="success" size="16" color="red"></icon>
+
+  <view class="goods-info">
+    <image src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAPDxAPDQ8QDw8QEA8VFRgVEBAXEBIQFRUWGBUXFxcYHSggGBolGxUYITEhJikrLi4uFx8zODMuNygtLisBCgoKDQ0NFQ4OFSsZFSUrNystMysrLTgrOCsrLSs3Ky0tLS0tKys3LTEvNDcrKysrLSstNzcrLSstKysrKysrN//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAAAQcCBAYFAwj/xABKEAABAwMBBQUEAg4HCQEAAAABAAIDBAURIQYHEjFBEyJRYYEycZGhFLEVI0JSVHJ0gpKUorLB0QgkNTZTYrMWFzNjc4TC0vAl/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAIBA//EABwRAQACAgMBAAAAAAAAAAAAAAABEQISIjHBIf/aAAwDAQACEQMRAD8AvFERAREQERQgKVCIJREQEXk33aWioG8VbUxQjoC7vn3NGp+Cr+578KMO4KClqa13TDeBpPkCC75ILWRVD9nNq7jrR0UVuhdydLjj169/X4NR27W91IzW7QStJ5tj7Yt+Tmj5ILZfUsb7T2j3uaFm14PIg+4hU3LuHa8fbLpO9x6mIEZ9XKINzNdSkSUF6kjkby+1yNHxa8/UgudRlVGKPbCkzwTUte3/ADFnER+cG/Wkm8u80g//AEbDJgc3xl4b8g4fNBbilV9s3vetdYWxyvdRzE44ZhhufDtB3fjhd9HI1wDmODmnkQQQfUIM0UKUBERAREQEREGCIiDNERAREQQpREEKV86idsbHSSODWMaXOJOjWgZJKqC8bdV97ldQ7NRvjYM9rUvw0BvLQ68APj7R6BB2+2W8KgtQxUSdpP0ijw6X3kZw0e9cHJd79tEeG3sda7ec/bXEh8g/GA4j7m6ea6nYrddSUB7erP06tdq6SXvNa48+Brv3jkrvmtAGAMAcvBBWGze5mjhcJrlK+4znU8ZcIs+Yzl3qfRWLQWyCnaGU8EULR0ZG1o+QW2iAiIgIiICjClEHO7SbE2+4tIq6WNzyCBI0cMrfMOH8cqu/93V5tL3SWG4drCDxdjKccXiC0jgJ8+6VcyIKptO9x0EwpNoKKSgnJA4w09iQfuiDqBnqMhWlDM17Q9jg5rgCCCC0g9QRzXn3/Z+luERhrIWSsIIGR32+bXc2n3KpZLZdtlpDLRudcbUSOKM8RfG3xwPYOvtDQ9Qgu5Fz+yG19HdYTLRyZLccbHaSxk/fDw8+S6BAREQEREGCIiDNERAREQF8qqoZEx8krgxjGlziTgNaBkkr6EqmdsrrPtDcW2e2SH6DCQauRuOA4dr3uoHIDqfIIPndr9XbUTyUVncaa2sHDPM8YMgd0xzxp7I1PXCtTZfZ+C200dLTNw1g1OAHPf1c7HUr62Cx09BAymo4xFEzpzJPVzidST4r0kBF8qnj4H9ljtOF3Dn2ePHdz5ZVWWPefUUdSaHaaAUkhyWTNB7JwzpkDOn+YeuEFsItegroqiNstPIyWJ4y1zHBzSPIhbCCEUoghEwpQERRhAUqMIglQRnmpRBTm8PZKst1S69WEmMgZniY0YLRqXcP3bTjUc+oXa7u9uYLxThzCGVMbW9tH1a775viwnkfRdaRlUrtpY5NnK9l7tjM0sjiypi6NEjgTjwa4jTwIHQoLqUrQsd2iraaKqpncUUzA5p6+YI6EHI9FvoCIiDBERBmiIgIi8zaO8x0FJNVzexCwux1cfuWjzJwEHDb3trJouytFuHFXV3dOCeKOJ/d6ciddegBK6Td9sdDaKQQR9+V+HTPPN8mMaeDR0H81xm6C1SV1RUbQXAEzTvc2AHPCyLQFzc9PuR7j4q20BERAVCf0io5PpdHI+Nxp208gDsHg7UuOQT0Ps6K+18aqljlaWTRskYebXNDmn0KD8q7u9p7pRy9naw+oB4nPg4HPYWjUuwNWnzHzV37H71KOtPYVg+x9YCGmOUlrXO09lxxrryOCu1obXT0+fo8EUPFz4I2Nz78BeBtpsBQ3ZuamPgnAw2WPAlHgD0cNeRQdUCpVKOrL1sw4RyNddLWTkOw8yRN6jOvBgdDlvuVmbKbX0V0jL6KYPc0DjYdJY8/fNOuNOfJB76IiAiIgKFKFBClQiCVrXKhjqYZIJ2B8UrC1zTyLStlEFPbtKiW03mrsEpLqZ3HLTl3PGA4Y8QW5z5tKuFVJvggkoa63XuIZZBIIpsDUMdyJ8sFw9+FalFVsmjZNE4PjkY1zSDoWuGQUH3REQYIiIM0REBVNvnkfWVVsssTsfSphJLg8owcDT3cZ/NVsqm9mmG47W1tU48UdvYWM8jjgaB6mQoLdoqVkMUcMTQ2ONjWtA5BrRgL7r5znDXEeB+pa1qkLoWOccnXX1SviteOzdRfF9Q0Paw+07OPRfZE0IiICIiCHNBBBAIIwc8iFyVDu9oqa5C5UodTv4HtdGzAheXc3Y6e4aLrkQEREBERAREQQilQglERB4O3NjFwt1VSH2pIiWeUre8w/pALltxF17a0ineT2tHLJE4HmGklzfrI/NVjqntlXi3bWV9EMCKuZ2jAOXHw9ry9ZEFwKVClBgiIgzREQal1quxp5pv8KKR/6LSf4KudwFKTQVNZJgyVlXK4nrhuOZ/GLj6rutrv7PrfyWo/ccuQ3B/2JF/16j95BYczctIHUELXtsJjiax3MZ+tbaI25qnnvH9ab5RO+tegFjwDOca4x54WSNyyunnXa901IYRVTNiM8gjj4vu5DyA/+6r0VUO0QNz2rpKM4MFui7ZwPIvGHHT3mMehVvIkREQEREBERAUFSiCrmb3BS1T6S9UMtE4PIY8d9hZnRx64825Vj224w1MbZqaVk0TuTmOBafgqW/pCbL1L5I7lE10lPHCI5cHPZEOOHY+9PFqR4aqtdi7jdYpmizmo4y5uWRhzonH/ADtPd+KD9eoq02P3qxSuFHeG/Y+vaQwh7XNie7xBPsZ8Dp4FWUDnkgKURAVQ7zgKbaKxVbRgySNicRzI7QN19JSFbyqLfT/aVg/K2/6sKC3EUqEGKIiDNERBp3mk7emnh/xYZWermkfxVdf0fqzNtmpXDhlpaqVrh1HFgj5hw9FaJVPWB4tm1tVRsOILhH2gH/NLTJp69p8UFwoiICFEQVDYf761/wCSO/dgVvKor0foG2FLOcNiuEHZknlx44cfpNj/AElboQEREBERAREQEREGE0LXtLHtDmuBBBALSDzBB5r5UdDFA3ggijib4MY1o+AWwiDnNrNiKC6N/rkIMgbhsjSWysHkRz9xyq2H2e2acdHXW1t95fGzPq5h1826dFdighBy2yO39vugAppg2cjJif3ZR446O9MrqlX2126ihrSZ6XNBWZ4myRZDC/xcwY69RgrmqXbW8WOTsb/TPqqNpDGVEbRnyPFydkdHYcguZVDvp/tOwflbf9WFWlaLlHVwR1EHEY5WhzeJpa7B8QdQqb3w1jztBZ4DjgZJSvGmvE+cB2v5gQXgiIgwREQZoiICqjfZbH05pL5SAioopY2v00dESSOLyySPc9WutK82yOsp5qWcZimY5juhweo8xz9EEWS5x1dNDUwuDo5o2uGD4jUe8HRbypvdxcZLHcJbBXn7VLIX0sh9l3FyHkHY/SB8VciAiIg4be5sq+40PFT5+l0ju1hI9oke00HxOAR5gLyt0u8b6e0UNeeCviGMu0M4boTjpIMahWcq2253VQ1b31lveaS4cXGHBxEb5OeoHsnzCCyUVDWbelc7ZWfQ9oIy9gcA53ABKxuNHt4dJGnQ/H3K7LRdqesibPSTMmidyc05GeoPgfIoN1ERAREQFi94aCScAAk+QHNZKrd6O3Zy6zWppqK+pHZu4DpCHDUZ6vI+A1KDq9hNsY7vHPLDE+NkM7owXEESAAEOHoV065rd7sz9irfDSFwfIOJ0hHIyPOTjyHL0XSoCIiAvnPAyRpZI1r2nmHNBafeCvoiDGNgaA1oAAGAAMABUPvcdnae1jw+gfOocr6VL3CjbW7bMa8B7KWGN5HTLIuJvwe8H0QXQiKEGKIiDNERAUKUQcNvW2N+ydJ2kHdraXMkLgO84jUx588DHgQF8t1m3rblT9lVFsVdTkMka4gOkxpxhp6k6EdCF3qqvehuxkrZm19rcyGraAXt1b2jmnLXhw5P+vRBaqKntnN601HIKHaSCSCdpAEwZ3XDxeBz/ABm6K26SqjmY2SF7ZI3DLXNcC0jyIQfZERBqXC2QVDHMqIY5WOaWkPY05aeY1VV3LdpW2yZ9bs3VOZ90aZ57r+paCdHDwDtfNW+iCnRvjqaMiO82iaB4wC5pIB8SGvGD6OK6yz71rPVcqtsDtNJgY/2j3fmuylha8Ye1rh4EAj5rkdot2Vrr3iSan7N4B1hIj4s/fYGqD1htjbOMRi4UZe7kBURfzXj3zelaKTIdVtmeM92Edoc+ZGg+K8pu5KzDm2pPvn/kF79k3dWmi1goonO++kzI/wCL849EHAy7Y3faEuprNTOoaV2Q+oeTng6gOAwDjo3J8wu43f7AU1ojJH2+rf8A8SZw7zs9Gg54W/X1XWxRNYA1jQ1o5AAAD3ALNAUFShQalvqjIHEjBa9zfgtoFedaRh048JT8wlnJIkcSSTI74BbMOueEXlMdR69JERY5IccalVJum/rt4vVzx3DL2TD5Z/8AVjPiuk3v7Sm32yTs3YqKn7TFj2su9tw9zc+pC+26jZ11utUEUoDZ5OKWTxDn6gHzDeEeiDslCBSgwREQZoiICIiAiIg8292KlrmdnW08c7dccbQS0nq082nzCq2t2ButmkdU7O1LpYMlzqaR2SfIA91/yPvVyIgrGwb5aOR4guUUtvqRo/jaTCH9e9zb6j1VkUtVHMxskL2yRuGQ5rgWkeRC8raDZSguAxW0scp6OIxIPc9uCquv9NPZHwWawTSCe41HaAvc1xgiGnC3i0wcEk45NQXYi+VKxzY2NkdxvDWhzsY4nAanHmV9UBERAREQEREBCiINeGnDXPcM98gkdMhY0NL2QcM54nud8VtIlq2noWtca6OmiknneI4omlznE6BoX2mlaxpe9wa1oJJJAAA5klUrtLeJtqK0Wu2FzbbC4OqJsaP4TzHl96Op15BEvrsrSybR3l12qGH7GUji2nY/7p4Hdw3kde8T44HRXQtGy2qGip4qamYGRRN4Wj6yT1JOufNbyAiKEGKIiDNERAREQEREBERAVN7KF9z2rrK3R9PQNfEwj2QdY2geJPfKsPb69fQLZV1LSA9kRDM/4ru6z5lc/uQsv0a0xzO1lrHGd5PMg6M/ZGfUoLBREQEREBFxO12ztx7WSutNwkil4NYHjjp5OAHAaPuXFVrZN+NdFIW3CkjmYzIf2bXRysI0OQSRz6HCD9AIqhi390Jkw6kqWxEDvZjLgeuW5/ivah30WVwyZpmHwdTyZ/ZyEFiIuA/3x2T8Jk/V5v5KDvksn4TJ+rzfyQWAtC83mmoojNWTxwRjq9wGT4AcyfIKtLpvojkBjs9DU1sxGhMbg1p/Fblx+S17Ru+rrzIK3aeV4aP+FTsIbwtPPOPYHkNfEoNKvutw2rnNLQtkpLOx322UggygHqep8GD3lWzszs7TW2nbT0cYYwak83vd1c49St+io44I2xQMbHGwANa0ANAHkvugIiICIiDBERBmiIgIiICIiAiIgq3+kNUYtcMI1dNVxADx4WvP14VhbP0Qp6SmgboIYImfotAVbb4cz3SxUQ5Pqe0PuD4xy9wcrZQEREBERBBVN7XUosm0NJcomgUtxcYpxjuh7iA8+vdf7wVcqrnf1QGWzPe0a080MnnjJYf38+iDorlsLa6p/aTUMBfkHia3hcTz1LcZ9VuDZW38voNIf+3iz9Sw2JrjUWyhndq6SlgLvxuEB3zC9tB4/wDsrbvwCk/V4v5J/stb/wAApP1eL+S9hEHwpKKKEcMMUcTfBjGtHyX3REBERAREQEREGCIiDNERAREQEREBERBUm1rg/bC0MOoZAT7jiZw+oK21UN//AL62/wDJf/CdW8gIiICIiAvK2qtv0uhq6b/GglaPxi08PzwvVRBW+4a5ma0iB+eOkmkiOeYBPG0ftEeishVFujJgvN9ox7AnMgHQfbHj6nD4K3AglERAREQEUZUoCIiAiIgwREQZoiICIiAiIgIiIKgv399aD8kH7k6t9eFU7KUslxiubmu+lQxljTxHh4dRqPEBx+K91AREQEREBERBTexsxj2wusXISRyE+nZOH7yuQLg27GzM2jN2jdGKaSnLXjJ7QycIby8NAc+S7tBKKFKAiIgjCZUqCEBSiIIUoiDHCKUQYOUIiAiIgIiICIiAiIgIiICIiAiIgIiIMlkiIJUKUQQVCIglERAREQYoiLR//9k="></image>
+  </view>
+
+  <!-- 商品标题和价格 -->
+  <view class="goods-right">
+    <view class="goods-title">
+      space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
+    </view>
+    <view class="goods-num">
+      <text>$ 300</text>
+      <view class="goods-num-size">
+        <view class="goods-">-</view>
+        <text>3</text>
+        <view class="goods-">+</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<!-- 底部 -->
+<view class="footer">
+  <view class="goods_all">
+    <icon type="success" size="16" color="red"></icon>
+    全选
+    <view class="gooder-center">
+      <view> 合计:
+        <text class="goods-pirce"> $8888 </text>
+      </view>
+      <text class="gooder-freight">包含运费</text>
+    </view>
+  </view>
+
+  <view class="dictionary">
+    结算
+  </view>
+</view>

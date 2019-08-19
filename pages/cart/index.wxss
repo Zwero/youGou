@@ -1,1 +1,149 @@
-/* pages/cart/index.wxss */
+page {
+  background: #f6f6f6;
+}
+
+.address-info {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100rpx;
+}
+
+.address-info::after {
+  display: block;
+  content: '';
+  position: absolute;
+  right: 25rpx;
+  top: 35rpx;
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 1px #666 solid;
+  border-right: 1px #666 solid;
+  transform: rotate(45deg);
+}
+
+.address-text {
+  padding: 20rpx;
+}
+
+.border {
+  width: 100%;
+  height: 15rpx;
+  display: block;
+}
+
+.cart-title {
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  align-items: center;
+  border-top: 20rpx #eee solid;
+  border-bottom: 1px #ddd solid;
+}
+
+.cart_center {
+  display: flex;
+  padding: 20rpx 15rpx;
+  border-bottom: 1px #ddd solid;
+  align-items: center;
+}
+
+.cart_center text {
+  margin-left: 20rpx;
+}
+
+/* 商品内容 */
+
+.goods-item {
+  display: flex;
+  align-items: center;
+  padding: 15rpx;
+}
+
+.goods-item .goods-info image {
+  width: 200rpx;
+  height: 130rpx;
+  flex-shrink: 0;
+  margin-left: 30rpx;
+}
+
+.goods-item .goods-right .goods-title{
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 15rpx;
+}
+
+.goods-right text {
+  font-size: 13px;
+  color: red;
+}
+
+.goods-num {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods-num-size {
+  display: flex;
+}
+
+.goods-num-size text {
+  margin: 0 30rpx;
+  line-height: 50rpx;
+
+}
+
+.goods- {
+  height: 50rpx;
+  width: 50rpx;
+  border: 1px #ccc solid;
+  text-align: center;
+}
+
+/* 底部结算 */
+.footer{
+  display: flex;
+  height: 100rpx;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.goods_all {
+  margin-right: 40rpx;
+  display: flex;
+  align-items: center;
+  margin: 0 20rpx;
+}
+
+.goods_all icon {
+  margin-right: 20rpx;
+}
+
+.gooder-center {
+  margin-left: 40rpx;
+}
+
+.gooder-freight{
+  font-size: 12px;
+  color: #b2b3b8;
+}
+
+.goods-pirce {
+  color: red;
+}
+
+.dictionary {
+  height: 100rpx;
+  line-height: 100rpx;
+  background: red;
+  color: #fff;
+  width: 200rpx;
+  text-align: center;
+}

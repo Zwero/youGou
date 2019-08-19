@@ -10,9 +10,10 @@ Page({
     pagenum: 1,
     pagesize: 10,
     keyword: "",
-    goods:[],
+    goods: [],
     // 是否有更多
     hasMore: true,
+    inputValue: ""
   },
   /**
   * 生命周期函数--监听页面加载
@@ -24,20 +25,25 @@ Page({
     this.getData()
   },
 
+  // 点击取消搜索事件
+  cancelSearch() {
+
+  },
+
   // tab 栏样式变化
-  handleChange (event) {
+  handleChange(event) {
     console.log('tab栏变化')
     console.log(event)
-    const {index} = event.currentTarget.dataset;
+    const { index } = event.currentTarget.dataset;
     this.setData({
-      current:index
+      current: index
     })
   },
 
   // 获取数据
   getData() {
     // console.log(123)
-    const { pagenum, pagesize, keyword} = this.data
+    const { pagenum, pagesize, keyword } = this.data
     request({
       url: "/goods/search",
       data: {
@@ -45,37 +51,37 @@ Page({
         pagenum,
         pagesize
       }
-    }).then(res =>{
-      const {goods} = res.data.message
-        // 是否满足pagesize条数。不满足说明是最后一页
-        if (goods.length < this.data.pagesize) {
-          this.setData({
-            hasMore: false
-          })
-        }
-
-        // 循环给每个商品修改价格，保留两位小数点
-        const newGoods = goods.map(v => {
-          v.goods_price = Number(v.goods_price).toFixed(2);
-          return v;
-        })
-
+    }).then(res => {
+      const { goods } = res.data.message
+      // 是否满足pagesize条数。不满足说明是最后一页
+      if (goods.length < this.data.pagesize) {
         this.setData({
-          // 合并新旧的数据
-          goods: [...this.data.goods, ...newGoods]
+          hasMore: false
         })
+      }
+
+      // 循环给每个商品修改价格，保留两位小数点
+      const newGoods = goods.map(v => {
+        v.goods_price = Number(v.goods_price).toFixed(2);
+        return v;
       })
-  
+
+      this.setData({
+        // 合并新旧的数据
+        goods: [...this.data.goods, ...newGoods]
+      })
+    })
+
 
   },
 
-// 下拉
-  onReachBottom () {
+  // 下拉
+  onReachBottom() {
     // 没有更多, 直接放回
     // console.log(567)
     // console.log(this.data.hasMore)
 
-    if( !this.data.hasMore) {
+    if (!this.data.hasMore) {
       return;
     }
     // 页数加1

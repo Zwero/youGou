@@ -15,10 +15,9 @@
   </view>
 
   <view class="goods_title">
-    <text>{{detail.goods_name}}</text> 
+    <text>{{detail.goods_name}}</text>
     <view class="goods_ico">
-    <text class="iconfont icon-shoucang"></text>
-      收藏
+      <text class="iconfont icon-shoucang"></text> 收藏
     </view>
   </view>
   <view class="goods_express">
@@ -26,11 +25,15 @@
   </view>
 </view>
 
- <!-- //商品详情内容 -->
-  <rich-text nodes="{{ detail.goods_introduce }}"></rich-text>
+<!-- //商品详情内容 -->
+<rich-text nodes="{{ detail.goods_introduce }}"></rich-text>
+
+
 
 <!-- // 底部 -->
 <view class="goods_bottom">
+  <!-- 打开客服回话按钮 -->
+  <button class="contact" open-type="contact">联系客服</button>
   <view class="goods_left">
     <view class="iconfont icon-kefu"></view>
     <text>联系客服</text>
