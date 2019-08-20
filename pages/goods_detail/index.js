@@ -23,7 +23,7 @@ Page({
     request({
       url: "/goods/detail",
       data: {
-        goods_id: 3
+        goods_id: id
       }
     }).then(res => {
       // console.log(res,'商品详情数据')

@@ -44,9 +44,9 @@
     <view class="goods-num">
       <text>$ {{item.goods_price}}</text>
       <view class="goods-num-size">
-        <view class="goods-">-</view>
+        <view class="goods-" bindtap="handleMinus" data-id="{{item.goods_id}}">-</view>
         <text>{{item.number}}</text>
-        <view class="">+</view>
+        <view class="goods-"  bindtap="handleAddNunber" data-id="{{item.goods_id}}">+</view>
       </view>
     </view>
 
@@ -56,13 +56,13 @@
 <!-- 底部 -->
 <view class="footer">
   <view class="goods_all">
-    <icon type="success" size="16" color="red"></icon>
+    <icon type="success" size="16" bindtap="handleAllSelected" color="{{ allSelected ? 'red': 'gray' }}"></icon>
     全选
     <view class="gooder-center">
-      <view> 合计:
-        <text class="goods-pirce"> $8888 </text>
+      <view> 合计: 
+        <text class="goods-pirce"> $   {{ allPrice }} </text>
       </view>
-      <text class="gooder-freight">包含运费</text>
+      <text class="gooder-freight">包含运费</text> 
     </view>
   </view>
 
