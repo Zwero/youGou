@@ -58,13 +58,14 @@ page {
   display: flex;
   align-items: center;
   padding: 15rpx;
+  border-bottom: 1px solid #ccc;
 }
 
 .goods-item .goods-info image {
-  width: 200rpx;
-  height: 130rpx;
+  width: 150rpx;
+  height: 150rpx;
   flex-shrink: 0;
-  margin-left: 30rpx;
+  margin: 0 20rpx;
 }
 
 .goods-item .goods-right .goods-title{

@@ -39,9 +39,11 @@
     <text>联系客服</text>
   </view>
   <view class="goods_left">
-    <view class="iconfont icon-gouwuche"></view>
-    <text>购物车</text>
+    <navigator open-type="switchTab" url="/pages/cart/index">
+      <view class="iconfont icon-gouwuche"></view>
+      <text>购物车</text>
+    </navigator>
   </view>
-  <view class="goods-bottom-bar">加入购物车</view>
+  <view class="goods-bottom-bar" bindtap="handleCart" data-value="{{detail}}">加入购物车</view>
   <view class="goods-bottom-bar">立即购买</view>
 </view>
