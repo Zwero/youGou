@@ -70,7 +70,8 @@ Page({
             detaliInfo: res.provinceName + res.cityName + res.countyName + res.detailInfo
           }
         })
-        console.log(this.data.address)
+        // 保存地址
+        wx.setStorageSync("sites", this.data.address)
       }
     })
   },
@@ -117,7 +118,7 @@ Page({
     })
     // 计算总价格
     this.getAllPrice();
-  // 如果当前的selected的值是false时候，要修改全选的状态
+   // 如果当前的selected的值是false时候，要修改全选的状态
     this.handleAllSelectedChange();
 
   },
@@ -193,5 +194,50 @@ Page({
     });
 
     this.getAllPrice();
+  },
+
+  // 结算
+  handleClose() {
+    console.log('结算')
+    const {address, goods} = this.data
+    // 判断收货地址不能为空
+    if(!address.userName){
+      wx.showToast({
+        title: '收货地址不能为空',
+        icon: "none"
+      })
+      return
+    }
+
+    // 判断购物车是否为空
+    if(Object.keys(goods).length === 0 ) {
+      wx.showToast({
+        title: '购物车不能为空',
+        icon: "nome"
+      });
+      return
+    }
+
+    // 保存选中的
+
+    let pitchOn = []
+
+    Object.keys(this.data.goods).forEach(v => {
+      // item是当前的商品
+      const item = this.data.goods[v];
+
+
+      // 满足选中状态时true的时候添加商品
+      if (item.selected) {
+        pitchOn.push(item)
+      }
+    });
+    console.log(pitchOn)
+    wx.setStorageSync("cartList", pitchOn);
+
+    wx.navigateTo({
+      url: '/pages/order_enter/index',
+    })
   }
+
 })

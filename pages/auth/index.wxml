@@ -1,0 +1,14 @@
+<view>
+  <image src="../../images/zwero.jpg"></image>
+</view>
+
+
+
+<button 
+  type="primary" 
+  class="authorization" 
+  open-type="getUserInfo"
+  bindgetuserinfo="authorization"
+  >
+  授权
+  </button>

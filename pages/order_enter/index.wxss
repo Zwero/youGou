@@ -13,19 +13,6 @@ page {
   padding-right: 100rpx;
 }
 
-.address-info::after {
-  display: block;
-  content: '';
-  position: absolute;
-  right: 25rpx;
-  top: 35rpx;
-  width: 16rpx;
-  height: 16rpx;
-  border-top: 1px #666 solid;
-  border-right: 1px #666 solid;
-  transform: rotate(45deg);
-}
-
 .address-text {
   padding: 20rpx;
 }
@@ -50,6 +37,14 @@ page {
   padding: 20rpx 15rpx;
   border-bottom: 1px #ddd solid;
   align-items: center;
+}
+
+.cart-text {
+  margin-right: 40rpx;
+}
+
+.allPrice {
+  color: red;
 }
 
 .cart_center text {
@@ -92,64 +87,26 @@ page {
   justify-content: space-between;
 }
 
-.goods-num-size {
-  display: flex;
+.goods-num-size text{
+  color: black;
 }
 
 .goods-num-size text {
   margin: 0 30rpx;
   line-height: 50rpx;
-
 }
 
-.goods- {
-  height: 50rpx;
-  width: 50rpx;
-  border: 1px #ccc solid;
-  text-align: center;
-}
 
 /* 底部结算 */
 .footer{
-  display: flex;
   height: 100rpx;
-  justify-content: space-between;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background:#fff;
-}
-
-.goods_all {
-  margin-right: 40rpx;
-  display: flex;
-  align-items: center;
-  margin: 0 20rpx;
-}
-
-.goods_all icon {
-  margin-right: 20rpx;
-}
-
-.gooder-center {
-  margin-left: 40rpx;
-}
-
-.gooder-freight{
-  font-size: 12px;
-  color: #b2b3b8;
-}
-
-.goods-pirce {
-  color: red;
-}
-
-.dictionary {
-  height: 100rpx;
-  line-height: 100rpx;
-  background: red;
+  background:pink;
   color: #fff;
-  width: 200rpx;
+  line-height: 100rpx;
   text-align: center;
+  font-size: 18xp;
 }

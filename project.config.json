@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.0",
-	"appid": "wxb1bc0e02210183a2",
+	"appid": "wxfb52f2d7b2f6123a",
 	"projectname": "shopOne",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -44,8 +44,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
+					"name": "pages/order_enter/index",
+					"pathName": "pages/order_enter/index",
 					"query": "",
 					"scene": null
 				}
