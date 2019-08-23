@@ -8,7 +8,8 @@
     "pages/goods_detail/index",
     "pages/search/index",
     "pages/order_enter/index",
-    "pages/auth/index"
+    "pages/auth/index",
+    "pages/map/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",

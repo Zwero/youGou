@@ -35,10 +35,10 @@ Page({
 
   // 点击支付  
   handelPay () {
-    console.log(123)
+    // console.log(123)
     const { cartList, sites, allPrice} = this.data
     const token = wx.getStorageSync("token") || {};
-    console.log(token,'这是token')
+    // console.log(token,'这是token')
     const goods = cartList.map( v => {
       return {
         goods_id : v.goods_id,
@@ -56,10 +56,28 @@ Page({
         goods
       },
       header: {
-        Authorization: token
+        Authorization: token || ""
       }
     }).then( res => {
-      console.log(res, "支付回调")
+      // console.log(res)
+      const { order_number } = res.data.message
+      request({
+        url: '/my/orders/req_unifiedorder',
+        method: 'POST',
+        data: {
+          order_number
+        },
+        header: {
+          Authorization: token || ""
+        }
+      }).then( res => {
+        // console.log(res,"支付")
+        const {pay} = (res.data.message)
+        wx.requestPayment(
+          pay
+        )
+        // console.log(888)
+      })
     })
   }
 
